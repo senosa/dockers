@@ -2,4 +2,3 @@ gem 'tdiary', path: '.'
 gem 'tdiary-contrib', github: 'tdiary/tdiary-contrib'
 
 gem 'tdiary-style-gfm'
-gem 'puma'
