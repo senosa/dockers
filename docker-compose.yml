@@ -1,0 +1,16 @@
+app:
+  build: app
+  volumes:
+    - ~/Dropbox/var/data:/usr/src/app/data
+    - ~/Dropbox/var/public:/usr/src/app/public
+  restart: always
+
+web:
+  build: web
+  links:
+    - app
+  volumes_from:
+    - app
+  ports:
+    - "8080:80"
+  restart: always
