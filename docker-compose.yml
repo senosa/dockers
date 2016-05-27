@@ -8,6 +8,8 @@ services:
     restart: always
   web:
     build: web
+    volumes:
+      - ~/Dropbox/var/nginx-html:/usr/share/nginx/html
     volumes_from:
       - app
     ports:
