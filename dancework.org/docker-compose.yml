@@ -1,0 +1,5 @@
+web:
+  build: web
+  environment:
+    VIRTUAL_HOST: www.dancework.org
+  restart: always
