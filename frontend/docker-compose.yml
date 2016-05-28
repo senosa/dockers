@@ -1,0 +1,10 @@
+nginx:
+  image: jwilder/nginx-proxy
+  volumes:
+    # - ./data/certs:/etc/nginx/certs:ro
+    # - ./data/vhost.d:/etc/nginx/vhost.d
+    # - /usr/share/nginx/html
+    - /var/run/docker.sock:/tmp/docker.sock:ro
+  ports:
+    - '80:80'
+  restart: always

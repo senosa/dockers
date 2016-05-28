@@ -1,0 +1,17 @@
+app:
+  build: app
+  volumes:
+    - ~/Dropbox/var/tdiary-data:/usr/src/app/data
+    - ~/Dropbox/var/tdiary-public:/usr/src/app/public
+  restart: always
+web:
+  build: web
+  links:
+    - app
+  volumes:
+    - ~/Dropbox/var/nginx-html:/usr/share/nginx/html
+  volumes_from:
+    - app
+  environment:
+    VIRTUAL_HOST: www.snest.net
+  restart: always
