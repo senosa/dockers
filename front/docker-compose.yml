@@ -1,4 +1,4 @@
-nginx:
+proxy:
   image: jwilder/nginx-proxy
   volumes:
     # - ./data/certs:/etc/nginx/certs:ro
