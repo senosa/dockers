@@ -1,5 +1,5 @@
-app:
-  build: app
+diary:
+  build: diary
   volumes:
     - ~/Dropbox/var/tdiary-data:/usr/src/app/data
     - ~/Dropbox/var/tdiary-public:/usr/src/app/public
@@ -7,11 +7,11 @@ app:
 web:
   build: web
   links:
-    - app
+    - diary
   volumes:
     - ~/Dropbox/var/nginx-html:/usr/share/nginx/html
   volumes_from:
-    - app
+    - diary
   environment:
     VIRTUAL_HOST: www.snest.net
   restart: always
