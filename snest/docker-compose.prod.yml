@@ -1,0 +1,9 @@
+diary:
+  volumes:
+    - ~/var/tdiary-data:/usr/src/app/data
+    - ~/var/tdiary-public:/usr/src/app/public
+  environment:
+    - RACK_ENV=production
+web:
+  volumes:
+    - ~/var/nginx-html:/usr/share/nginx/html
