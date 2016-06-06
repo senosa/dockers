@@ -5,8 +5,8 @@ agent:
     - /var/run/docker.sock:/var/run/docker.sock
     - /var/lib/mackerel-agent/:/var/lib/mackerel-agent/
   environment:
-    APIKEY:
-    ENABLE_DOCKER_PLUGIN: 'true'
-    AUTO_RETIREMENT: 'false'
-    OPTS: -v
+    apikey:
+    enable_docker_plugin: 'true'
+    auto_retirement: 'false'
+    opts: -v
   restart: always
