@@ -1,0 +1,10 @@
+agent:
+  image: mackerel/mackerel-agent
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    - /var/lib/mackerel-agent/:/var/lib/mackerel-agent/
+  environment:
+    ENABLE_DOCKER_PLUGIN: true
+    AUTO_RETIREMENT: false
+    OPTS: -v
+  restart: always
